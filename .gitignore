@@ -1,0 +1,10 @@
+# Local Figma extract / temp
+_figma_extract/
+_figma_temp.zip
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
