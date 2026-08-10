@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AEO Review — DSQUARE Prototype</title>
-  <meta name="description" content="Final recommended AEO/GEO changes for the DSQUARE website prototype, for Strategy and Design review." />
+  <meta name="description" content="Final recommended AEO/GEO changes for the DSQUARE website prototype, for Strategy and Design review. English and Vietnamese." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&family=Funnel+Sans:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/main.css" />
 </head>
-<body>
+<body data-review-lang="en">
   <a class="sr-only" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container nav">
@@ -22,12 +22,12 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="site-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="work.html">Work</a></li>
-            <li><a href="insights.html">Insights</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li class="nav-cta"><a class="btn btn-primary" href="contact.html">Talk to us</a></li>
       </ul>
     </div>
@@ -36,167 +36,342 @@
 
     <section class="page-hero">
       <div class="container reveal">
-        <p class="eyebrow">Strategy + Design review</p>
-        <h1>AEO / GEO Review</h1>
-        <p class="lead">Full-site audit of the DSQUARE prototype against Figma, Growth Partner positioning, brand quality, IA, and AEO/GEO. This page is the review surface — public pages stay brand-first.</p>
-        <div class="aeo-legend">
-          <span class="chip chip-kept">Kept from Figma</span>
-          <span class="chip chip-modified">Modified</span>
-          <span class="chip chip-added">Added for AEO/GEO</span>
-          <span class="chip chip-removed">Removed / avoided</span>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn is-active" data-set-lang="en" aria-pressed="true">English</button>
+          <button type="button" class="lang-btn" data-set-lang="vi" aria-pressed="false">Tiếng Việt</button>
         </div>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="index.html">Open homepage</a>
-          <a class="btn btn-ghost" href="services.html">Open services</a>
+
+        <div data-lang="en">
+          <p class="eyebrow">Strategy + Design review</p>
+          <h1>AEO / GEO Review</h1>
+          <p class="lead">Full-site audit of the DSQUARE prototype against Figma, Growth Partner positioning, brand quality, IA, and AEO/GEO. This page is the review surface — public pages stay brand-first.</p>
+          <div class="aeo-legend">
+            <span class="chip chip-kept">Kept from Figma</span>
+            <span class="chip chip-modified">Modified</span>
+            <span class="chip chip-added">Added for AEO/GEO</span>
+            <span class="chip chip-removed">Removed / avoided</span>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="index.html">Open homepage</a>
+            <a class="btn btn-ghost" href="services.html">Open services</a>
+          </div>
+        </div>
+
+        <div data-lang="vi" hidden>
+          <p class="eyebrow">Review Strategy + Design</p>
+          <h1>AEO / GEO Review</h1>
+          <p class="lead">Rà soát toàn site prototype DSQUARE đối chiếu Figma, định vị Growth Partner, chất lượng brand, IA và AEO/GEO. Đây là trang review — các trang public vẫn ưu tiên brand.</p>
+          <div class="aeo-legend">
+            <span class="chip chip-kept">Giữ từ Figma</span>
+            <span class="chip chip-modified">Đã chỉnh</span>
+            <span class="chip chip-added">Thêm cho AEO/GEO</span>
+            <span class="chip chip-removed">Đã bỏ / tránh</span>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="index.html">Mở trang chủ</a>
+            <a class="btn btn-ghost" href="services.html">Mở Services</a>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section" style="padding-top:0;">
       <div class="container">
-        <div class="review-block reveal">
-          <h3>Review verdict</h3>
-          <p style="margin:0;">The prototype is an <strong style="color:var(--text);">evolution of the current Figma</strong> — campaign-led, dark, sharp, opinionated — with structural AEO clarity. Latest audit removed the SEO-looking hero box, differentiated the four capabilities, and cleaned taxonomy/linking without redesigning the brand.</p>
+
+        <!-- EN -->
+        <div data-lang="en">
+          <div class="review-block reveal">
+            <h3>Review verdict</h3>
+            <p style="margin:0;">The prototype is an <strong style="color:var(--text);">evolution of the current Figma</strong> — campaign-led, dark, sharp, opinionated — with structural AEO clarity. Latest pass removed AI/template visual patterns (dash+uppercase eyebrows, boxed accents, SaaS cards) so AEO lives in copy and structure, not SEO chrome.</p>
+          </div>
+
+          <div class="review-block reveal">
+            <h3>Latest audit findings (fixed)</h3>
+            <ul>
+              <li><strong>Dash + uppercase micro-labels</strong> removed sitewide; Growth Partner stays in hero body copy, not a labeled callout.</li>
+              <li><strong>Clients section</strong> restored to Figma-voiced “a little biased” framing; quote attribution left as Figma placeholder until verified.</li>
+              <li><strong>Card / tag / role-panel chrome</strong> restyled toward editorial rules instead of SaaS cards and amber callout boxes.</li>
+              <li><strong>Public meta language</strong> (“design file”, “Evidence rule”, “Client perspective from…”) removed from public pages.</li>
+              <li><strong>Commerce / Digital</strong> differentiation and taxonomy linking kept from prior audit.</li>
+            </ul>
+          </div>
+
+          <div class="review-block reveal">
+            <h3>1. Kept from Figma</h3>
+            <ul>
+              <li>Campaign-led Fronx hero as full-bleed first viewport.</li>
+              <li>Dark identity, blue/amber accents, editorial work cards, large DSQUARE footer.</li>
+              <li>Challenge / Solution / Impact case structure.</li>
+              <li>Voice: work runs the show, fuse sharp ideas, commerce “hate the hassle,” client quote.</li>
+            </ul>
+          </div>
+
+          <div class="review-block reveal">
+            <h3>2. Modified</h3>
+            <ul>
+              <li>Hero: campaign H1 + Growth Partner as native supporting copy (not a boxed callout).</li>
+              <li>Capability gateway H2 and card blurbs differentiated by ownership and outcome.</li>
+              <li>Services pillars rewritten for clear problem / deliverable / proof boundaries.</li>
+              <li>UI: less SaaS pill/glow; editorial capability rows.</li>
+              <li>Work tags and related links tightened to evidenced ownership.</li>
+            </ul>
+          </div>
+
+          <div class="review-block reveal">
+            <h3>3. Added for AEO / GEO</h3>
+            <ul>
+              <li>Entity: DSQUARE = Growth Partner Agency in Vietnam + four capabilities in visible text.</li>
+              <li>Consistent taxonomy across Home, Services, Work, Insights, Contact, Footer.</li>
+              <li>DSQUARE’s Role on every case; publish-only metrics.</li>
+              <li>Insights module with capability categories and expertise notes.</li>
+              <li>Service ↔ Work ↔ Insights contextual links.</li>
+            </ul>
+          </div>
+
+          <div class="review-block reveal">
+            <h3>4. Removed / avoided</h3>
+            <ul>
+              <li>Hero amber “annotation” panel; meta page-purpose chips; strategy-doc labels on public pages.</li>
+              <li>Generic SaaS H1; invented stats; placeholder/Lorem/Rayo leftovers.</li>
+              <li>Vague Commerce “data” framing; over-claimed Work↔Service links (Suzuki as Digital; Mitsubishi as Commerce).</li>
+              <li>Self-referential AEO blog post.</li>
+            </ul>
+          </div>
+
+          <h2 class="reveal" style="margin-top:2.5rem;">Change log</h2>
+          <table class="aeo-table reveal">
+            <thead>
+              <tr><th>Area</th><th>Status</th><th>Final recommendation</th><th>Why</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Campaign-led hero visual</td>
+                <td><span class="status status-kept">Kept</span></td>
+                <td>Fronx KV remains the dominant first-viewport plane.</td>
+                <td>Strongest Figma move; brand lockup stays visible.</td>
+              </tr>
+              <tr>
+                <td>Growth Partner in hero</td>
+                <td><span class="status status-modified">Modified</span></td>
+                <td>Explicit in supporting paragraph under campaign H1 — no uppercase label, dash, or boxed panel.</td>
+                <td>Entity clarity that feels native to the composition.</td>
+              </tr>
+              <tr>
+                <td>Capability H2</td>
+                <td><span class="status status-modified">Modified</span></td>
+                <td>“What we own when growth is the brief.”</td>
+                <td>Clear for humans/AI; more DSQUARE than template slogans.</td>
+              </tr>
+              <tr>
+                <td>Four-capability taxonomy</td>
+                <td><span class="status status-added">Added</span></td>
+                <td>Brand &amp; Communication · Customer Experience &amp; CRM · Commerce · Digital Solutions &amp; Innovation</td>
+                <td>Consistent naming across the graph.</td>
+              </tr>
+              <tr>
+                <td>Commerce definition</td>
+                <td><span class="status status-modified">Modified</span></td>
+                <td>Strategy, storefront, purchase journey, ops, platform integrations.</td>
+                <td>Stops vague “data” ownership that belongs elsewhere.</td>
+              </tr>
+              <tr>
+                <td>Digital Solutions definition</td>
+                <td><span class="status status-modified">Modified</span></td>
+                <td>Architecture, CDI / marketing-to-sales platforms, operable builds, prototypes.</td>
+                <td>Users can tell what DSQUARE actually provides.</td>
+              </tr>
+              <tr>
+                <td>Case studies</td>
+                <td><span class="status status-modified">Modified</span></td>
+                <td>Challenge / Solution / Impact + Role + evidenced links only.</td>
+                <td>Attributable proof without fabricated claims.</td>
+              </tr>
+              <tr>
+                <td>Insights</td>
+                <td><span class="status status-added">Added</span></td>
+                <td>POV / project-learning articles with capability tags and related work.</td>
+                <td>Expertise signal for GEO, not SEO filler.</td>
+              </tr>
+              <tr>
+                <td>Fabricated facts / over-claims</td>
+                <td><span class="status status-removed">Removed</span></td>
+                <td>Publish-only metrics; Suzuki scoped to Brand creative surface.</td>
+                <td>Protects Strategy trust and citation quality.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="review-block reveal" style="margin-top:2rem;">
+            <h3>Page map</h3>
+            <ul>
+              <li><a href="index.html">Home</a> — campaign hero + Growth Partner + capability gateway + work + insights</li>
+              <li><a href="services.html">Services</a> — four pillars (problems / deliverables / work / insights)</li>
+              <li><a href="work.html">Work</a> + Suzuki / Ariston / Mitsubishi / Gojek</li>
+              <li><a href="insights.html">Insights</a> + 3 articles</li>
+              <li><a href="about.html">About</a> · <a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="review-block reveal">
+            <h3>Open decisions (need DSQUARE stakeholders)</h3>
+            <ul>
+              <li>Official Suzuki Fronx role wording beyond the creative surface in Figma.</li>
+              <li>Whether Gojek should keep a Commerce tag (awareness → order outcomes) or Brand-only.</li>
+              <li>Partner logo row once an approved mark set exists.</li>
+              <li>Insights author format: named people vs practice byline.</li>
+              <li>Client testimonial attribution (Figma only has Client name / Title &amp; Company placeholders). Quote remains unpublished-attribution until confirmed.</li>
+              <li>Canonical work email: <code>thework@dsquare.com.vn</code> vs other public addresses.</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="review-block reveal">
-          <h3>Latest audit findings (fixed)</h3>
-          <ul>
-            <li><strong>Hero positioning box</strong> felt like an AEO annotation — replaced with native eyebrow + supporting paragraph (scrim + type contrast only).</li>
-            <li><strong>“Four capabilities. One partner.”</strong> was generic — rewritten to “What we own when growth is the brief.”</li>
-            <li><strong>Commerce</strong> leaned on vague “data” language — refocused on strategy, storefront, purchase journey, ops, and platform integrations; removed Mitsubishi as Commerce proof.</li>
-            <li><strong>Digital Solutions</strong> was abstract — made concrete (CDI / marketing-to-sales platforms, architecture, operable builds); removed unevidenced Suzuki link.</li>
-            <li><strong>Capability blur</strong> — each pillar now has distinct problems / what we deliver / work / insights; labels use full capability names sitewide.</li>
-            <li><strong>Minor IA</strong> — “All works” → “All work”; Insights teaser no longer says “Subscribe” without a form.</li>
-          </ul>
+        <!-- VI -->
+        <div data-lang="vi" hidden>
+          <div class="review-block reveal">
+            <h3>Kết luận review</h3>
+            <p style="margin:0;">Prototype là <strong style="color:var(--text);">bản tiến hóa từ Figma hiện tại</strong> — campaign-led, tối, sắc, có chính kiến — kèm cấu trúc AEO rõ. Lượt gần nhất đã bỏ các pattern visual kiểu AI/template (eyebrow gạch ngang + chữ hoa, accent dạng hộp, card SaaS) để AEO nằm ở copy và cấu trúc, không phải “chrome SEO”.</p>
+          </div>
+
+          <div class="review-block reveal">
+            <h3>Phát hiện audit gần nhất (đã sửa)</h3>
+            <ul>
+              <li><strong>Micro-label gạch ngang + chữ hoa</strong> đã gỡ toàn site; Growth Partner nằm trong đoạn copy hero, không còn callout dạng nhãn.</li>
+              <li><strong>Mục Clients</strong> đưa về giọng Figma “a little biased”; attribution quote giữ placeholder Figma đến khi xác minh.</li>
+              <li><strong>Card / tag / role-panel</strong> chỉnh về nhịp editorial thay vì card SaaS và hộp amber.</li>
+              <li><strong>Ngôn ngữ meta trên trang public</strong> (“design file”, “Evidence rule”, “Client perspective from…”) đã gỡ.</li>
+              <li><strong>Commerce / Digital</strong> vẫn giữ phân biệt và taxonomy linking từ audit trước.</li>
+            </ul>
+          </div>
+
+          <div class="review-block reveal">
+            <h3>1. Giữ từ Figma</h3>
+            <ul>
+              <li>Hero Fronx dạng campaign full-bleed ở viewport đầu.</li>
+              <li>Nhận diện tối, accent xanh/amber, work editorial, footer DSQUARE lớn.</li>
+              <li>Cấu trúc case Challenge / Solution / Impact.</li>
+              <li>Giọng: work runs the show, fuse sharp ideas, commerce “hate the hassle,” quote khách.</li>
+            </ul>
+          </div>
+
+          <div class="review-block reveal">
+            <h3>2. Đã chỉnh</h3>
+            <ul>
+              <li>Hero: H1 campaign + Growth Partner là copy hỗ trợ tự nhiên (không hộp callout).</li>
+              <li>H2 gateway năng lực và mô tả card phân biệt theo ownership / outcome.</li>
+              <li>Services: bốn trụ viết lại theo problem / deliverable / proof rõ.</li>
+              <li>UI: bớt pill/glow SaaS; hàng năng lực mang tính editorial.</li>
+              <li>Tag Work và related links siết theo ownership có bằng chứng.</li>
+            </ul>
+          </div>
+
+          <div class="review-block reveal">
+            <h3>3. Thêm cho AEO / GEO</h3>
+            <ul>
+              <li>Entity: DSQUARE = Growth Partner Agency in Vietnam + bốn năng lực trong text nhìn thấy được.</li>
+              <li>Taxonomy thống nhất trên Home, Services, Work, Insights, Contact, Footer.</li>
+              <li>DSQUARE’s Role trên mọi case; chỉ dùng metric đã publish.</li>
+              <li>Module Insights theo capability + ghi chú chuyên môn.</li>
+              <li>Liên kết ngữ cảnh Service ↔ Work ↔ Insights.</li>
+            </ul>
+          </div>
+
+          <div class="review-block reveal">
+            <h3>4. Đã bỏ / tránh</h3>
+            <ul>
+              <li>Panel amber “annotation” ở hero; chip mục đích trang; nhãn kiểu strategy-doc trên trang public.</li>
+              <li>H1 SaaS generic; số liệu bịa; leftover placeholder/Lorem/Rayo.</li>
+              <li>Commerce “data” mơ hồ; link Work↔Service over-claim (Suzuki = Digital; Mitsubishi = Commerce).</li>
+              <li>Bài blog tự nói về AEO.</li>
+            </ul>
+          </div>
+
+          <h2 class="reveal" style="margin-top:2.5rem;">Nhật ký thay đổi</h2>
+          <table class="aeo-table reveal">
+            <thead>
+              <tr><th>Hạng mục</th><th>Trạng thái</th><th>Khuyến nghị cuối</th><th>Lý do</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hero visual dạng campaign</td>
+                <td><span class="status status-kept">Giữ</span></td>
+                <td>KV Fronx vẫn là mặt phẳng thống trị viewport đầu.</td>
+                <td>Move mạnh nhất từ Figma; brand lockup vẫn thấy rõ.</td>
+              </tr>
+              <tr>
+                <td>Growth Partner trong hero</td>
+                <td><span class="status status-modified">Đã chỉnh</span></td>
+                <td>Nói rõ trong đoạn dưới H1 campaign — không nhãn chữ hoa, không gạch ngang, không hộp.</td>
+                <td>Entity rõ mà vẫn native với composition.</td>
+              </tr>
+              <tr>
+                <td>H2 năng lực</td>
+                <td><span class="status status-modified">Đã chỉnh</span></td>
+                <td>“What we own when growth is the brief.”</td>
+                <td>Rõ với người/AI; đúng chất DSQUARE hơn slogan template.</td>
+              </tr>
+              <tr>
+                <td>Taxonomy bốn năng lực</td>
+                <td><span class="status status-added">Thêm</span></td>
+                <td>Brand &amp; Communication · Customer Experience &amp; CRM · Commerce · Digital Solutions &amp; Innovation</td>
+                <td>Đặt tên thống nhất trên toàn graph.</td>
+              </tr>
+              <tr>
+                <td>Định nghĩa Commerce</td>
+                <td><span class="status status-modified">Đã chỉnh</span></td>
+                <td>Strategy, storefront, purchase journey, ops, platform integrations.</td>
+                <td>Tránh ownership “data” mơ hồ thuộc chỗ khác.</td>
+              </tr>
+              <tr>
+                <td>Định nghĩa Digital Solutions</td>
+                <td><span class="status status-modified">Đã chỉnh</span></td>
+                <td>Architecture, CDI / marketing-to-sales platforms, operable builds, prototypes.</td>
+                <td>Người dùng hiểu DSQUARE thực sự làm gì.</td>
+              </tr>
+              <tr>
+                <td>Case studies</td>
+                <td><span class="status status-modified">Đã chỉnh</span></td>
+                <td>Challenge / Solution / Impact + Role + chỉ link có bằng chứng.</td>
+                <td>Proof quy được attribution, không bịa claim.</td>
+              </tr>
+              <tr>
+                <td>Insights</td>
+                <td><span class="status status-added">Thêm</span></td>
+                <td>Bài POV / học từ dự án, gắn capability + related work.</td>
+                <td>Tín hiệu chuyên môn cho GEO, không filler SEO.</td>
+              </tr>
+              <tr>
+                <td>Fact / over-claim bịa</td>
+                <td><span class="status status-removed">Đã bỏ</span></td>
+                <td>Chỉ metric đã publish; Suzuki giới hạn ở Brand creative surface.</td>
+                <td>Bảo vệ niềm tin Strategy và chất lượng citation.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="review-block reveal" style="margin-top:2rem;">
+            <h3>Sơ đồ trang</h3>
+            <ul>
+              <li><a href="index.html">Home</a> — hero campaign + Growth Partner + gateway năng lực + work + insights</li>
+              <li><a href="services.html">Services</a> — bốn trụ (problems / deliverables / work / insights)</li>
+              <li><a href="work.html">Work</a> + Suzuki / Ariston / Mitsubishi / Gojek</li>
+              <li><a href="insights.html">Insights</a> + 3 bài</li>
+              <li><a href="about.html">About</a> · <a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="review-block reveal">
+            <h3>Quyết định còn mở (cần stakeholder DSQUARE)</h3>
+            <ul>
+              <li>Wordings chính thức về vai trò Suzuki Fronx ngoài bề mặt creative trong Figma.</li>
+              <li>Gojek giữ tag Commerce (awareness → order) hay chỉ Brand.</li>
+              <li>Hàng logo partner khi có bộ mark được duyệt.</li>
+              <li>Format author Insights: tên người vs byline practice.</li>
+              <li>Attribution testimonial (Figma chỉ có placeholder Client name / Title &amp; Company). Quote chưa gắn attribution đến khi xác nhận.</li>
+              <li>Email work chuẩn: <code>thework@dsquare.com.vn</code> hay địa chỉ public khác.</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="review-block reveal">
-          <h3>1. Kept from Figma</h3>
-          <ul>
-            <li>Campaign-led Fronx hero as full-bleed first viewport.</li>
-            <li>Dark identity, blue/amber accents, editorial work cards, large DSQUARE footer.</li>
-            <li>Challenge / Solution / Impact case structure.</li>
-            <li>Voice: work runs the show, fuse sharp ideas, commerce “hate the hassle,” client quote.</li>
-          </ul>
-        </div>
-
-        <div class="review-block reveal">
-          <h3>2. Modified</h3>
-          <ul>
-            <li>Hero: campaign H1 + Growth Partner as native supporting copy (not a boxed callout).</li>
-            <li>Capability gateway H2 and card blurbs differentiated by ownership and outcome.</li>
-            <li>Services pillars rewritten for clear problem / deliverable / proof boundaries.</li>
-            <li>UI: less SaaS pill/glow; editorial capability rows.</li>
-            <li>Work tags and related links tightened to evidenced ownership.</li>
-          </ul>
-        </div>
-
-        <div class="review-block reveal">
-          <h3>3. Added for AEO / GEO</h3>
-          <ul>
-            <li>Entity: DSQUARE = Growth Partner Agency in Vietnam + four capabilities in visible text.</li>
-            <li>Consistent taxonomy across Home, Services, Work, Insights, Contact, Footer.</li>
-            <li>DSQUARE’s Role on every case; publish-only metrics.</li>
-            <li>Insights module with capability categories and expertise notes.</li>
-            <li>Service ↔ Work ↔ Insights contextual links.</li>
-          </ul>
-        </div>
-
-        <div class="review-block reveal">
-          <h3>4. Removed / avoided</h3>
-          <ul>
-            <li>Hero amber “annotation” panel; meta page-purpose chips; strategy-doc labels on public pages.</li>
-            <li>Generic SaaS H1; invented stats; placeholder/Lorem/Rayo leftovers.</li>
-            <li>Vague Commerce “data” framing; over-claimed Work↔Service links (Suzuki as Digital; Mitsubishi as Commerce).</li>
-            <li>Self-referential AEO blog post.</li>
-          </ul>
-        </div>
-
-        <h2 class="reveal" style="margin-top:2.5rem;">Change log</h2>
-        <table class="aeo-table reveal">
-          <thead>
-            <tr><th>Area</th><th>Status</th><th>Final recommendation</th><th>Why</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Campaign-led hero visual</td>
-              <td><span class="status status-kept">Kept</span></td>
-              <td>Fronx KV remains the dominant first-viewport plane.</td>
-              <td>Strongest Figma move; brand lockup stays visible.</td>
-            </tr>
-            <tr>
-              <td>Growth Partner in hero</td>
-              <td><span class="status status-modified">Modified</span></td>
-              <td>Eyebrow + explicit paragraph under campaign H1 — no boxed SEO panel.</td>
-              <td>Entity clarity that feels native to the composition.</td>
-            </tr>
-            <tr>
-              <td>Capability H2</td>
-              <td><span class="status status-modified">Modified</span></td>
-              <td>“What we own when growth is the brief.”</td>
-              <td>Clear for humans/AI; more DSQUARE than template slogans.</td>
-            </tr>
-            <tr>
-              <td>Four-capability taxonomy</td>
-              <td><span class="status status-added">Added</span></td>
-              <td>Brand &amp; Communication · Customer Experience &amp; CRM · Commerce · Digital Solutions &amp; Innovation</td>
-              <td>Consistent naming across the graph.</td>
-            </tr>
-            <tr>
-              <td>Commerce definition</td>
-              <td><span class="status status-modified">Modified</span></td>
-              <td>Strategy, storefront, purchase journey, ops, platform integrations.</td>
-              <td>Stops vague “data” ownership that belongs elsewhere.</td>
-            </tr>
-            <tr>
-              <td>Digital Solutions definition</td>
-              <td><span class="status status-modified">Modified</span></td>
-              <td>Architecture, CDI / marketing-to-sales platforms, operable builds, prototypes.</td>
-              <td>Users can tell what DSQUARE actually provides.</td>
-            </tr>
-            <tr>
-              <td>Case studies</td>
-              <td><span class="status status-modified">Modified</span></td>
-              <td>Challenge / Solution / Impact + Role + evidenced links only.</td>
-              <td>Attributable proof without fabricated claims.</td>
-            </tr>
-            <tr>
-              <td>Insights</td>
-              <td><span class="status status-added">Added</span></td>
-              <td>POV / project-learning articles with capability tags and related work.</td>
-              <td>Expertise signal for GEO, not SEO filler.</td>
-            </tr>
-            <tr>
-              <td>Fabricated facts / over-claims</td>
-              <td><span class="status status-removed">Removed</span></td>
-              <td>Publish-only metrics; Suzuki scoped to Brand creative surface.</td>
-              <td>Protects Strategy trust and citation quality.</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="review-block reveal" style="margin-top:2rem;">
-          <h3>Page map</h3>
-          <ul>
-            <li><a href="index.html">Home</a> — campaign hero + Growth Partner + capability gateway + work + insights</li>
-            <li><a href="services.html">Services</a> — four pillars (problems / deliverables / work / insights)</li>
-            <li><a href="work.html">Work</a> + Suzuki / Ariston / Mitsubishi / Gojek</li>
-            <li><a href="insights.html">Insights</a> + 3 articles</li>
-            <li><a href="about.html">About</a> · <a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="review-block reveal">
-          <h3>Open decisions (need DSQUARE stakeholders)</h3>
-          <ul>
-            <li>Official Suzuki Fronx role wording beyond the creative surface in Figma.</li>
-            <li>Whether Gojek should keep a Commerce tag (awareness → order outcomes) or Brand-only.</li>
-            <li>Partner logo row once an approved mark set exists.</li>
-            <li>Insights author format: named people vs practice byline.</li>
-            <li>Canonical work email: <code>thework@dsquare.com.vn</code> vs other public addresses.</li>
-          </ul>
-        </div>
       </div>
     </section>
 
@@ -253,6 +428,39 @@
     </div>
   </footer>
   <a class="btn btn-ghost review-toggle" href="aeo-review.html">AEO Review</a>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=aeo2"></script>
+  <script>
+    (() => {
+      const btns = document.querySelectorAll("[data-set-lang]");
+      if (!btns.length) return;
+      const apply = (lang) => {
+        document.body.dataset.reviewLang = lang;
+        document.documentElement.lang = lang;
+        document.querySelectorAll("[data-lang]").forEach((el) => {
+          el.hidden = el.getAttribute("data-lang") !== lang;
+        });
+        btns.forEach((btn) => {
+          const on = btn.getAttribute("data-set-lang") === lang;
+          btn.classList.toggle("is-active", on);
+          btn.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+        try { localStorage.setItem("dsquare-aeo-lang", lang); } catch (e) {}
+        if (history.replaceState) {
+          history.replaceState(null, "", lang === "vi" ? "#vi" : "#en");
+        }
+      };
+      let lang = "en";
+      try {
+        const saved = localStorage.getItem("dsquare-aeo-lang");
+        if (saved === "en" || saved === "vi") lang = saved;
+      } catch (e) {}
+      const hash = (location.hash || "").replace("#", "");
+      if (hash === "vi" || hash === "en") lang = hash;
+      apply(lang);
+      btns.forEach((btn) => {
+        btn.addEventListener("click", () => apply(btn.getAttribute("data-set-lang")));
+      });
+    })();
+  </script>
 </body>
 </html>
