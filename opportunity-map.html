@@ -41,6 +41,11 @@
     .notes-header { padding-bottom:1rem; border-bottom:1px solid var(--line); }
     .notes-header h1 { margin:0 0 .4rem; font-family:"Funnel Display",sans-serif; font-size:1.45rem; }
     .notes-header p { margin:0; color:var(--muted); font-size:.92rem; line-height:1.45; }
+    .assessment { display:grid; grid-template-columns:1fr 1fr; gap:.45rem .8rem; margin-top:.85rem; }
+    .assessment div { padding-top:.45rem; border-top:1px solid var(--line); }
+    .assessment b { display:block; font-size:.76rem; text-transform:uppercase; letter-spacing:.035em; }
+    .assessment span { display:block; margin-top:.12rem; color:var(--muted); font-size:.75rem; line-height:1.3; }
+    .guardrail { margin-top:.85rem !important; color:var(--ink) !important; font-size:.82rem !important; }
     .legend { display:flex; flex-wrap:wrap; gap:.55rem 1rem; margin-top:.85rem; font-size:.78rem; color:var(--muted); }
     .legend span { display:inline-flex; align-items:center; gap:.4rem; }
     .dot { width:8px; height:8px; border-radius:50%; }
@@ -95,6 +100,8 @@
         <div class="notes-header">
           <h1 id="notes-title"></h1>
           <p id="notes-intro"></p>
+          <div class="assessment" id="assessment"></div>
+          <p class="guardrail" id="design-guardrail"></p>
           <div class="legend">
             <span><i class="dot" style="background:var(--keep)"></i><b data-legend="keep"></b></span>
             <span><i class="dot" style="background:var(--design)"></i><b data-legend="design"></b></span>
@@ -173,8 +180,8 @@
       'Confirm the authority model':['Chốt mô hình tác giả','Dùng tên chuyên gia, practice byline hay kết hợp cả hai?','LEADERSHIP + CONTENT']
     };
     const ui={
-      vi:{instruction:'Chọn một ý để đến đúng khu vực trên prototype.',title:'AEO × Visual focus',intro:'Giữ rõ direct answer và evidence cốt lõi. Design giúp người xem nhận ra nhanh, hiểu đúng và ghi nhớ lâu hơn.',legend:{keep:'KEEP for AEO',design:'Design ownership',build:'Implementation gap',decision:'Cần quyết định'},keep:'KEEP for AEO',keepHint:'Nội dung và quan hệ không được làm mất.',design:'DESIGN OWNERSHIP',designHint:'Cách làm direct answer và evidence nổi bật hơn.',secondary:'Decision & implementation gaps',sprint:'Design sprint đầu tiên',steps:['Đối chiếu notes với Figma WIP.','Tạo 2–3 visual territories cho Homepage.','Áp dụng direction được chọn vào một Case Study.','Stress-test Services và mobile trước khi scale.']},
-      en:{instruction:'Select an item to jump to the relevant area.',title:'AEO × Visual focus',intro:'Keep the answers and evidence. Design makes them visible, clear and memorable.',legend:{keep:'KEEP for AEO',design:'Design ownership',build:'Implementation gap',decision:'Decision needed'},keep:'KEEP for AEO',keepHint:'Content and relationships that must remain.',design:'DESIGN OWNERSHIP',designHint:'Make the direct answer and evidence more prominent.',secondary:'Decision & implementation gaps',sprint:'Suggested first design sprint',steps:['Validate notes against Figma WIP.','Create 2–3 Homepage visual territories.','Apply the preferred direction to one Case Study.','Stress-test Services and mobile before scaling.']}
+      vi:{instruction:'Chọn một ý để đến đúng khu vực trên prototype.',title:'AEO × Visual focus',intro:'Goal: giúp search engine và AI hiểu đúng DSQUARE, trích được câu trả lời rõ và nhận biết vì sao nội dung đáng tin.',assessment:[['Entity','Ai hoặc dịch vụ nào đang được nói đến?'],['Direct answer','Trang trả lời câu hỏi chính bằng câu nào?'],['Evidence','Claim được chứng minh bằng case, metric hoặc nguồn nào?'],['Context','Ai làm gì, cho ai, ở đâu và trong phạm vi nào?'],['Relationship','Trang kết nối với Service, Work và Insight nào?']],guardrail:'Design có thể thay đổi cách trình bày, nhưng không nên làm các tín hiệu này khó thấy, ẩn sau interaction hoặc biến hoàn toàn thành hình ảnh.',legend:{keep:'KEEP for AEO',design:'Design ownership',build:'Implementation gap',decision:'Cần quyết định'},keep:'KEEP for AEO',keepHint:'Nội dung và quan hệ không được làm mất.',design:'DESIGN OWNERSHIP',designHint:'Cách làm direct answer và evidence nổi bật hơn.',secondary:'Decision & implementation gaps'},
+      en:{instruction:'Select an item to jump to the relevant area.',title:'AEO × Visual focus',intro:'Goal: help search engines and AI understand DSQUARE, extract a clear answer and recognize why the content is credible.',assessment:[['Entity','Who or what service is this page about?'],['Direct answer','Which statement answers the primary question?'],['Evidence','Which case, metric or source supports the claim?'],['Context','Who did what, for whom, where and within what scope?'],['Relationship','How does the page connect to Services, Work and Insights?']],guardrail:'Design may change the presentation, but these signals should not become difficult to find, hidden behind interaction or converted entirely into images.',legend:{keep:'KEEP for AEO',design:'Design ownership',build:'Implementation gap',decision:'Decision needed'},keep:'KEEP for AEO',keepHint:'Content and relationships that must remain.',design:'DESIGN OWNERSHIP',designHint:'Make the direct answer and evidence more prominent.',secondary:'Decision & implementation gaps'}
     };
     const focus={
       home:{
@@ -225,6 +232,7 @@
     }
     function renderLanguage(){
       const c=ui[lang]; document.getElementById('top-instruction').textContent=c.instruction; document.getElementById('notes-title').textContent=c.title; document.getElementById('notes-intro').textContent=c.intro;
+      document.getElementById('assessment').innerHTML=c.assessment.map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join(''); document.getElementById('design-guardrail').textContent=c.guardrail;
       document.querySelectorAll('[data-legend]').forEach(el=>el.textContent=c.legend[el.dataset.legend]);
       document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang))); renderNotes();
     }
