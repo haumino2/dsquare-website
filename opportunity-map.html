@@ -63,6 +63,9 @@
     .secondary { padding:.85rem 0; }
     .secondary summary { cursor:pointer; font-weight:600; font-size:.86rem; color:var(--muted); }
     .secondary .note-list { padding:.5rem 0 0; }
+    .creative-freedom { margin-top:.85rem; padding:.75rem .85rem; background:#f2eee8; }
+    .creative-freedom b { display:block; font-size:.82rem; }
+    .creative-freedom p { margin:.25rem 0 0; color:var(--muted); font-size:.8rem; line-height:1.4; }
     .note { width:100%; text-align:left; background:transparent; border:0; border-top:1px solid var(--line); padding:.9rem .1rem .2rem 1.2rem; position:relative; cursor:pointer; }
     .note:first-child { border-top:0; }
     .note::before { content:""; position:absolute; left:0; top:1.25rem; width:8px; height:8px; border-radius:50%; background:var(--line); }
@@ -159,7 +162,7 @@
 
     const vi = {
       'Keep the explicit entity answer':['Giữ câu định vị rõ ràng','DSQUARE là Growth Partner Agency tại Việt Nam, với 4 năng lực kết nối.','STRATEGY + AEO'],
-      'Make DSQUARE the protagonist':['Đưa DSQUARE thành nhân vật chính','Featured work là bằng chứng; DSQUARE phải là điều người xem ghi nhớ.','DESIGN · HERO'],
+      'Make DSQUARE the protagonist':['Đưa DSQUARE thành nhân vật chính','Featured work là evidence; DSQUARE phải là điều người xem ghi nhớ.','DESIGN · HERO'],
       'Create an ownable homepage rhythm':['Tạo nhịp thị giác riêng của DSQUARE','Tái thiết typography, composition, motion và image treatment.','DESIGN · ART DIRECTION'],
       'Validate image crop and layering against Figma':['Kiểm tra fidelity với Figma','Xác định lỗi do clone trước khi yêu cầu redesign.','DEVELOPMENT'],
       'Choose the leading brand character':['Chốt tính cách thị giác chủ đạo','Chọn một tension dẫn dắt: credible/provocative, systematic/expressive hoặc premium/energetic.','CEO + DESIGN'],
@@ -168,7 +171,7 @@
       'Replace repeated-card rhythm with stronger hierarchy':['Giảm cảm giác card lặp lại','Tạo hierarchy rõ giữa proposition, capability và proof.','DESIGN · UI'],
       'Preserve semantic links in visual treatments':['Giữ text và internal links','Visualization bổ trợ, không thay thế nội dung HTML.','DEVELOPMENT + AEO'],
       'Select the primary mental model':['Chọn mental model chính','Partner, integrated system hay hành trình từ brand đến revenue?','CEO + STRATEGY + DESIGN'],
-      'Preserve the evidence structure':['Giữ cấu trúc bằng chứng','Challenge → Approach → Impact; phân biệt KPI công khai và confidential.','CONTENT + AEO'],
+      'Preserve the evidence structure':['Giữ cấu trúc evidence','Challenge → Approach → Impact; phân biệt KPI công khai và confidential.','CONTENT + AEO'],
       'Give each project a specific visual rhythm':['Tạo nhịp riêng cho từng case','Cho phép art direction theo project trong một hệ DSQUARE nhất quán.','DESIGN · CASE STUDY'],
       'Turn proof into a visual language':['Biến proof thành visual language','Thiết kế state riêng cho metric, claim có nguồn và qualitative outcome.','DESIGN · PROOF'],
       'Design for uneven asset availability':['Thiết kế cho asset không đồng đều','Layout vẫn mạnh khi project chỉ có ít hình ảnh được duyệt.','DESIGN + DEVELOPMENT'],
@@ -201,6 +204,24 @@
         en:{keep:[['Structure','Question/H1 → direct answer → reasoning → example → author.','.article-body'],['Direct answer','A 40–80 word answer immediately addresses the topic.','.article-body .lead'],['Evidence','Case example, verified metric and source link.','.media-frame'],['Context','Topic, service, author and publish/update dates.','.author-card'],['Relationship','Connect Insight to related Work and Services.','.aside-card']],design:[['Editorial hierarchy','Bold the direct answer directly after the H1.','.article-body'],['Evidence callout','Visualize project proof and metrics in the reading flow.','.media-frame'],['Authority treatment','Clarify author, practice and dates without overpowering content.','.author-card']]}
       }
     };
+    const pageBrief={
+      home:{
+        vi:{goal:'Goal: giúp người xem và AI hiểu ngay DSQUARE là ai, làm gì và có evidence năng lực nào.',profile:[['Entity','DSQUARE — Growth Partner Agency tại Việt Nam.'],['Direct answer','DSQUARE giúp brand tăng trưởng bằng 4 năng lực kết nối.'],['Evidence','Featured work và verified results từ các case nổi bật.'],['Context','Vietnam market; brand, CX/CRM, commerce và digital solutions.'],['Relationship','Dẫn đến Services, Case Studies, Insights và Contact.']],freedom:'Design được tự do xử lý art direction, hero composition, typography, image treatment, navigation và motion. Chỉ cần giữ một entity statement dễ thấy và đường dẫn rõ đến capability/proof.'},
+        en:{goal:'Goal: help people and AI understand who DSQUARE is, what it does and what proves its capability.',profile:[['Entity','DSQUARE — a Growth Partner Agency in Vietnam.'],['Direct answer','DSQUARE drives growth through four connected capabilities.'],['Evidence','Featured work and verified results from priority cases.'],['Context','Vietnam; brand, CX/CRM, commerce and digital solutions.'],['Relationship','Connect to Services, Case Studies, Insights and Contact.']],freedom:'Design is free to shape the art direction, hero, typography, imagery, navigation and motion. Keep one visible entity statement and clear paths to capability and proof.'}
+      },
+      services:{
+        vi:{goal:'Goal: giúp người xem hiểu DSQUARE giải quyết vấn đề gì và nên chọn capability nào.',profile:[['Entity','4 service pillars thuộc DSQUARE.'],['Direct answer','Mỗi service giải quyết problem nào và tạo output gì.'],['Evidence','Case study, result hoặc insight chứng minh từng capability.'],['Context','Business/marketing challenge và phạm vi delivery của service.'],['Relationship','Mỗi service nối trực tiếp với Work và Insights liên quan.']],freedom:'Design được tự do chọn growth loop, journey, operating system hoặc interaction model; tự do thay layout/card system. Chỉ cần giữ definition, problem solved và proof ở dạng text có thể đọc được.'},
+        en:{goal:'Goal: help people understand which problems DSQUARE solves and which capability fits.',profile:[['Entity','DSQUARE’s four service pillars.'],['Direct answer','What problem each service solves and what it delivers.'],['Evidence','Cases, results or insights supporting each capability.'],['Context','The business challenge and delivery scope.'],['Relationship','Each service connects directly to relevant Work and Insights.']],freedom:'Design may choose a loop, journey, operating system or other interaction model and freely reshape the layout. Keep definitions, problems solved and proof readable as text.'}
+      },
+      work:{
+        vi:{goal:'Goal: chứng minh DSQUARE đã tạo ra thay đổi gì cho một client cụ thể.',profile:[['Entity','DSQUARE + client + project/campaign.'],['Direct answer','Challenge gì, DSQUARE làm gì và outcome là gì.'],['Evidence','Verified metric/qualitative proof với label, timeframe và source.'],['Context','Market, thời điểm, service và scope cụ thể của DSQUARE.'],['Relationship','Case nối về capability và Insight liên quan.']],freedom:'Design được tự do tạo art direction riêng cho từng project, cinematic media, scroll storytelling, motion và composition. Chỉ cần Challenge, Approach, Impact, DSQUARE Role và verified result vẫn dễ tìm.'},
+        en:{goal:'Goal: prove what DSQUARE changed for a specific client.',profile:[['Entity','DSQUARE + client + project or campaign.'],['Direct answer','The challenge, DSQUARE approach and resulting outcome.'],['Evidence','Verified metrics or qualitative proof with label, timeframe and source.'],['Context','Market, timing, service and DSQUARE’s specific scope.'],['Relationship','Connect the case to its capability and related Insight.']],freedom:'Design may create a distinct art direction, cinematic media, scroll narrative, motion and composition for each project. Keep Challenge, Approach, Impact, DSQUARE Role and verified results easy to find.'}
+      },
+      insight:{
+        vi:{goal:'Goal: thể hiện expertise của DSQUARE bằng một point of view có thể trích dẫn và kiểm chứng.',profile:[['Entity','Chủ đề chuyên môn + author/practice của DSQUARE.'],['Direct answer','Luận điểm chính được trả lời ngay sau H1.'],['Evidence','Case example, verified metric, source hoặc practical framework.'],['Context','Vì sao chủ đề quan trọng, áp dụng khi nào và cho ai.'],['Relationship','Article nối với related Service và Work.']],freedom:'Design được tự do xây editorial identity, typography, cover art, illustration, data visualization và reading interaction. Chỉ cần direct answer, author/date, source và related links không bị ẩn.'},
+        en:{goal:'Goal: express DSQUARE expertise through a quotable and verifiable point of view.',profile:[['Entity','The expertise topic + DSQUARE author or practice.'],['Direct answer','The main thesis appears immediately after the H1.'],['Evidence','Case example, verified metric, source or practical framework.'],['Context','Why the topic matters, when it applies and to whom.'],['Relationship','Connect the article to related Services and Work.']],freedom:'Design may create the editorial identity, typography, cover art, illustration, data visualization and reading interactions. Keep the direct answer, author/date, sources and related links visible.'}
+      }
+    };
     const tabs=document.getElementById('tabs'), notes=document.getElementById('notes'), frame=document.getElementById('preview');
     let current=pages[0], lang='vi';
 
@@ -209,10 +230,10 @@
       tabs.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>selectPage(b.dataset.page)));
     }
     function renderNotes(){
-      const c=ui[lang], f=focus[current.id][lang];
+      const c=ui[lang], f=focus[current.id][lang], brief=pageBrief[current.id][lang];
       const group=(kind,items)=>`<section class="focus-section ${kind}"><h2>${kind==='keep'?c.keep:c.design}</h2><p>${kind==='keep'?c.keepHint:c.designHint}</p><div class="focus-list">${items.map((x,i)=>`<button class="focus-item" type="button" data-group="${kind}" data-index="${i}"><b>${x[0]}</b><span>${x[1]}</span></button>`).join('')}</div></section>`;
       const secondary=current.notes.filter(n=>n.kind==='build'||n.kind==='decision');
-      notes.innerHTML=group('keep',f.keep)+group('design',f.design)+`<details class="secondary"><summary>${c.secondary}</summary><div class="note-list">${secondary.map((n,i)=>{const v=vi[n.title];const title=lang==='vi'?v[0]:n.title;const body=lang==='vi'?v[1]:n.body;return `<button class="note" type="button" data-secondary="${i}" data-kind="${n.kind}"><h2>${title}</h2><p>${body}</p></button>`}).join('')}</div></details>`;
+      notes.innerHTML=group('keep',f.keep)+group('design',f.design)+`<div class="creative-freedom"><b>CREATIVE FREEDOM</b><p>${brief.freedom}</p></div><details class="secondary"><summary>${c.secondary}</summary><div class="note-list">${secondary.map((n,i)=>{const v=vi[n.title];const title=lang==='vi'?v[0]:n.title;const body=lang==='vi'?v[1]:n.body;return `<button class="note" type="button" data-secondary="${i}" data-kind="${n.kind}"><h2>${title}</h2><p>${body}</p></button>`}).join('')}</div></details>`;
       notes.querySelectorAll('.focus-item').forEach(b=>b.addEventListener('click',()=>{const x=f[b.dataset.group][Number(b.dataset.index)];focusArea({kind:b.dataset.group,selector:x[2]})}));
       notes.querySelectorAll('[data-secondary]').forEach(b=>b.addEventListener('click',()=>focusArea(secondary[Number(b.dataset.secondary)])));
     }
@@ -220,7 +241,7 @@
       current=pages.find(p=>p.id===id); renderTabs(); renderNotes();
       document.getElementById('page-title').textContent=current.title;
       document.getElementById('url-label').textContent=current.url;
-      frame.src=current.url;
+      frame.src=current.url; renderLanguage();
     }
     function focusArea(note){
       const doc=frame.contentDocument; if(!doc) return;
@@ -231,8 +252,8 @@
       target.scrollIntoView({behavior:'smooth',block:'center'});
     }
     function renderLanguage(){
-      const c=ui[lang]; document.getElementById('top-instruction').textContent=c.instruction; document.getElementById('notes-title').textContent=c.title; document.getElementById('notes-intro').textContent=c.intro;
-      document.getElementById('assessment').innerHTML=c.assessment.map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join(''); document.getElementById('design-guardrail').textContent=c.guardrail;
+      const c=ui[lang], brief=pageBrief[current.id][lang]; document.getElementById('top-instruction').textContent=c.instruction; document.getElementById('notes-title').textContent=c.title; document.getElementById('notes-intro').textContent=brief.goal;
+      document.getElementById('assessment').innerHTML=brief.profile.map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join(''); document.getElementById('design-guardrail').textContent=c.guardrail;
       document.querySelectorAll('[data-legend]').forEach(el=>el.textContent=c.legend[el.dataset.legend]);
       document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang))); renderNotes();
     }
