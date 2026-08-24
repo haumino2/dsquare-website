@@ -69,9 +69,6 @@
     .note h2 { margin:0 0 .35rem; font-family:"Funnel Display",sans-serif; font-size:1rem; }
     .note p { margin:0; color:var(--muted); line-height:1.4; font-size:.88rem; }
     .note small { display:block; margin-top:.55rem; color:var(--ink); font-weight:600; letter-spacing:.02em; }
-    .sprint { border-top:1px solid var(--line); padding-top:1rem; }
-    .sprint h2 { font-family:"Funnel Display",sans-serif; font-size:1rem; margin:0 0 .7rem; }
-    .sprint ol { margin:0; padding-left:1.15rem; color:var(--muted); font-size:.86rem; line-height:1.5; }
     @media(max-width:980px){
       .workspace { grid-template-columns:1fr; }
       .notes { border-left:0; border-top:1px solid var(--line); }
@@ -106,10 +103,6 @@
           </div>
         </div>
         <div class="note-list" id="notes"></div>
-        <div class="sprint">
-          <h2 id="sprint-title"></h2>
-          <ol id="sprint-list"></ol>
-        </div>
       </aside>
     </main>
   </div>
@@ -232,7 +225,7 @@
     }
     function renderLanguage(){
       const c=ui[lang]; document.getElementById('top-instruction').textContent=c.instruction; document.getElementById('notes-title').textContent=c.title; document.getElementById('notes-intro').textContent=c.intro;
-      document.querySelectorAll('[data-legend]').forEach(el=>el.textContent=c.legend[el.dataset.legend]); document.getElementById('sprint-title').textContent=c.sprint; document.getElementById('sprint-list').innerHTML=c.steps.map(x=>`<li>${x}</li>`).join('');
+      document.querySelectorAll('[data-legend]').forEach(el=>el.textContent=c.legend[el.dataset.legend]);
       document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang))); renderNotes();
     }
     document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>{lang=b.dataset.lang;renderLanguage()}));
