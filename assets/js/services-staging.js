@@ -56,11 +56,14 @@
       frame = requestAnimationFrame(() => setActive(closestCard()));
     }, { passive: true });
 
+    const scrollToCard = (index) => {
+      track.scrollTo({ left: cards[index]?.offsetLeft ?? 0, behavior: 'smooth' });
+    };
     shell.querySelector('[data-carousel-prev]')?.addEventListener('click', () => {
-      cards[Math.max(0, closestCard() - 1)]?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+      scrollToCard(Math.max(0, closestCard() - 1));
     });
     shell.querySelector('[data-carousel-next]')?.addEventListener('click', () => {
-      cards[Math.min(cards.length - 1, closestCard() + 1)]?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+      scrollToCard(Math.min(cards.length - 1, closestCard() + 1));
     });
     setActive(0);
   });

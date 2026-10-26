@@ -148,7 +148,7 @@ body.menu-open { overflow: hidden; }
 }
 .service-stage__copy {
   align-self: start;
-  padding-top: 88px;
+  padding-top: 68px;
   padding-right: 1rem;
 }
 .stage-label {
@@ -178,7 +178,12 @@ body.menu-open { overflow: hidden; }
 }
 .stage-intro strong { font-weight: 700; }
 
-.carousel-shell { min-width: 0; position: relative; }
+.carousel-shell {
+  min-width: 0;
+  position: relative;
+  align-self: start;
+  padding-top: 96px;
+}
 .case-carousel {
   display: flex;
   gap: 26px;
@@ -300,7 +305,7 @@ body.menu-open { overflow: hidden; }
   min-height: 1040px;
   border-top: 1px solid rgba(255,255,255,.05);
 }
-.service-stage--digital .service-stage__copy { padding-top: 18px; }
+.service-stage--digital .service-stage__copy { padding-top: 68px; }
 .service-index {
   display: grid;
   max-width: 31rem;
@@ -500,6 +505,7 @@ body.menu-open { overflow: hidden; }
     padding: 180px 0 86px var(--page-x);
   }
   .service-stage__copy { padding: 0 var(--page-x) 68px 0; }
+  .carousel-shell { padding-top: 0; }
   .service-stage h1,
   .service-stage h2 { margin-bottom: 1.55rem; font-size: clamp(2.2rem, 9vw, 2.75rem); }
   .stage-intro { font-size: 1.1rem; line-height: 1.55; }
